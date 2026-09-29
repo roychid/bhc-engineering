@@ -1,64 +1,66 @@
-export const services = [
-  { n: '01', title: 'Architectural Design', text: 'Concepts, drawings and design thinking shaped around buildability, function and ambition.' },
-  { n: '02', title: 'Engineering Design', text: 'Integrated engineering design and technical documentation for projects that need to move from idea to execution.' },
-  { n: '03', title: 'Engineering Consultancy', text: 'Technical insight that helps clients make clearer decisions across planning, design and delivery.' },
-  { n: '04', title: 'EPC / EPC+F', text: 'Medium-sized project delivery from engineering and procurement through construction, with financing capability where required.' },
-];
-
-export const projectTypes = ['Residential', 'Commercial', 'Industrial', 'Infrastructure', 'Development'];
-
-export const process = [
-  ['01', 'Discover', 'Understand the brief, site, constraints and opportunity.'],
-  ['02', 'Define', 'Turn ambition into a clear technical direction and scope.'],
-  ['03', 'Design', 'Develop the architectural and engineering solution.'],
-  ['04', 'Engineer', 'Resolve the details that make the design buildable.'],
-  ['05', 'Deliver', 'Support procurement, construction and project execution.'],
-];
-
-export const software = [
-  ['BHC PROJECT FLOW', 'A future-ready client journey for briefs, project stages, documents and approvals.'],
-  ['BHC DOCUMENT CONTROL', 'A structured digital layer for drawings, revisions, submissions and project records.'],
-  ['BHC PROJECT VIEW', 'A clean project dashboard concept for milestones, communication and delivery visibility.'],
-];
-
-// Facts drawn from BHC's CIPC registration and SARS tax compliance status.
-export const credentials = [
-  'Registered Private Company — CIPC 2026/647641/07',
-  'SARS Tax Compliant',
-  'Head Office — Johannesburg, South Africa',
-];
-
-// Verifiable counts only. Replace with audited figures once available.
-export const stats = [
-  { n: '2026', label: 'Founded' },
-  { n: '03', label: 'Directors' },
-  { n: '04', label: 'Core Disciplines' },
-  { n: '05', label: 'Sectors Served' },
-];
-
-export const presence = {
-  hq: {
-    label: 'Head Office',
-    city: 'Johannesburg, Gauteng',
-    country: 'South Africa',
-    address: '417 Headingley, Jacobs Avenue cnr Corlett Drive, Fairways, Gauteng, 2196',
-  },
-  // TODO(client): confirm the countries/cities BHC actually operates in before publishing.
-  regions: ['South Africa'],
-  note: 'Regional delivery capability across Southern Africa, scoped per project.',
+export const company = {
+  name: 'BHC Engineering & Design',
+  legal: 'BHC Engineering and Design (Pty) Ltd',
+  reg: '2026/647641/07',
+  email: 'projects@bhcengineering.co.za',
+  address: ['417 Headingley, Jacobs Avenue', 'cnr Corlett Drive, Fairways', 'Johannesburg, Gauteng, 2196'],
 };
 
-// TODO(client): replace with real registrations/memberships (e.g. ECSA, CIDB, SACAP, SAICE)
-// and supply logo assets. Do not publish unverified claims.
-export const certifications: { name: string; body: string }[] = [];
+export const nav: [string, string][] = [['About', '/about/'], ['Services', '/services/'], ['Projects', '/projects/'], ['Contact', '/contact/']];
 
-// TODO(client): supply real client / partner names and logo assets.
-export const partners: string[] = [];
+export const facts = [
+  { n: '4', label: 'integrated disciplines under one roof' },
+  { n: '5', label: 'sectors: residential to infrastructure' },
+  { n: '1', label: 'point of accountability, brief to handover' },
+  { n: 'EPC+F', label: 'delivery with financing where required' },
+];
 
-// Real project photography and case studies to replace the concept imagery below.
+export const services = [
+  { title: 'Architectural Design', text: 'Concepts, drawings and design thinking shaped around buildability, function and ambition.', points: ['Concept and schematic design', 'Design development and documentation', 'Regulatory submissions'] },
+  { title: 'Engineering Design', text: 'Integrated engineering design and technical documentation for projects that need to move from idea to execution.', points: ['Coordinated technical drawings', 'Specifications and schedules', 'Design review and resolution'] },
+  { title: 'Engineering Consultancy', text: 'Technical insight that helps clients make clearer decisions across planning, design and delivery.', points: ['Feasibility and technical advice', 'Options and risk assessment', 'Independent project review'] },
+  { title: 'EPC / EPC+F Delivery', text: 'Medium-sized project delivery from engineering and procurement through construction, with financing capability where required.', points: ['Engineering, procurement, construction', 'Single contract responsibility', 'Financing subject to project structure'] },
+];
+
+export const sectors = [
+  { name: 'Residential', text: 'Private homes, cluster housing and multi-unit developments designed for the way people live.', img: 'sector-residential', pos: 'center' },
+  { name: 'Commercial', text: 'Offices, retail and mixed-use buildings that work hard for their owners and occupants.', img: 'sector-commercial', pos: 'center' },
+  { name: 'Industrial', text: 'Warehousing, logistics and light-industrial facilities planned around throughput and cost.', img: 'sector-industrial', pos: 'center' },
+  { name: 'Infrastructure', text: 'Site works, services and supporting infrastructure that projects depend on.', img: 'hero-home', pos: 'left center' },
+  { name: 'Development', text: 'Technical support for developers from feasibility and layout through to delivery.', img: 'hero-home', pos: 'right center' },
+];
+
+export const approach = [
+  ['Listen and define', 'We start with the brief, the site and the constraints, and agree what the project has to achieve.'],
+  ['Design', 'Architectural and engineering solutions are developed together, so problems surface early, on paper.'],
+  ['Document', 'Coordinated drawings and specifications that a contractor can price and build without guessing.'],
+  ['Procure', 'Support with tendering, contractor evaluation and appointment, or direct procurement under EPC.'],
+  ['Build', 'Site support and contract administration to keep the building true to the design, on programme and budget.'],
+  ['Hand over', 'Completion, records and close-out, with the team still reachable afterwards.'],
+];
+
+export const digital = [
+  ['Coordinated 3D models', 'Architecture and engineering worked in one model so clashes are found before site.'],
+  ['Controlled documents', 'Every drawing, revision and submission tracked, so everyone builds from the current set.'],
+  ['Clear project records', 'Decisions, approvals and milestones kept in one place the client can see.'],
+];
+
+export const values = [
+  ['Buildable first', 'A design is only finished when it can be documented, procured and built.'],
+  ['Engineering enables ambition', 'Technical rigour should widen what a client can do, not narrow it.'],
+  ['Clarity', 'Plain scope, plain communication, no surprises on cost or programme.'],
+  ['Accountability', 'One team answerable from first sketch to handover.'],
+  ['Integrity', 'Honest advice, including when the answer is no.'],
+];
+
 export const portfolio = [
   { type: 'Commercial', title: 'Commercial Development', location: 'Gauteng, South Africa', image: 'sector-commercial' },
-  { type: 'Industrial', title: 'Industrial & Logistics Facility', location: 'Southern Africa', image: 'sector-industrial' },
+  { type: 'Industrial', title: 'Industrial and Logistics Facility', location: 'Southern Africa', image: 'sector-industrial' },
   { type: 'Residential', title: 'Residential Development', location: 'Gauteng, South Africa', image: 'sector-residential' },
   { type: 'Commercial', title: 'Corporate Headquarters Concept', location: 'Johannesburg, South Africa', image: 'hero-home' },
 ];
+
+// Add approved leadership profiles here; the section only renders when populated.
+export const leaders: { name: string; role: string; bio: string }[] = [];
+// Add real registrations (ECSA, SACAP, CIDB...) here; the strip only renders when populated.
+export const registrations: string[] = [];
