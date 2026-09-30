@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowDownRight, ArrowRight, Menu, X } from 'lucide-react';
-import { projectTypes, process, services, software, credentials, stats, presence, certifications, partners, portfolio } from '../lib/content';
+import { ArrowRight, Menu, X } from 'lucide-react';
+import { projectTypes, process, services, sectors, software, credentials, stats, presence, certifications, partners, portfolio } from '../lib/content';
 
 function VideoHero() {
   return (
@@ -27,7 +27,7 @@ function VideoHero() {
 function Nav() {
   const [open, setOpen] = useState(false);
   const [solid, setSolid] = useState(false);
-  const links = [['Capabilities', '#capabilities'], ['Projects', '#projects'], ['Process', '#process'], ['Presence', '#presence'], ['Technology', '#technology'], ['About', '#about']];
+  const links = [['Capabilities', '#capabilities'], ['Sectors', '#sectors'], ['Projects', '#projects'], ['Process', '#process'], ['Presence', '#presence'], ['Technology', '#technology'], ['About', '#about']];
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 40);
     onScroll();
@@ -118,7 +118,8 @@ export default function Site() {
   return <main><Nav /><VideoHero />
     <Stats />
     <section className="statement wrap"><h2>We design what gets built.</h2><p>Architecture and engineering brought together around one simple objective: move a good idea from concept toward reality with clarity.</p></section>
-    <section className="services wrap" id="capabilities"><h2>What we do.</h2><div className="service-grid">{services.map(({ n, title, text }) => <article className="service" key={n}><h3>{title}</h3><p>{text}</p><ArrowDownRight /></article>)}</div></section>
+    <section className="services wrap" id="capabilities"><h2>What we do.</h2><div className="service-grid">{services.map(({ n, title, text, points }) => <article className="service" key={n}><h3>{title}</h3><p>{text}</p><ul>{points.map((pt) => <li key={pt}>{pt}</li>)}</ul></article>)}</div></section>
+    <section className="sectors wrap" id="sectors"><h2>Where we work.</h2><div className="sector-grid">{sectors.map((s) => <div className="sector" key={s.title}><h3>{s.title}</h3><p>{s.text}</p></div>)}</div></section>
     <section className="reveal wrap"><div className="reveal-image" style={{ backgroundImage: 'url(/media/hero-home.jpg)' }}><div className="drawing-lines" /></div><div className="reveal-copy"><h2>Good design has to be buildable.</h2><p>Good design is not only what looks right. It is what can be resolved, documented, procured and built.</p><a href="#process" className="line-link">See how we work <ArrowRight /></a></div></section>
     <Portfolio />
     <section className="process wrap" id="process"><h2>How we work.</h2><div className="process-list">{process.map(([n, title, text]) => <div className="process-row" key={n}><h3>{title}</h3><p>{text}</p><ArrowRight /></div>)}</div></section>

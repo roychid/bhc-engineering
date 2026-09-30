@@ -47,13 +47,8 @@ The project section currently uses concept visualisations/placeholders rather th
 
 ## Contact handoff
 
-The Contact form is client-side and opens a pre-filled email to the address in `lib/content.ts` (`company.email`). Replace the email address in `components/Site.tsx` with BHC's confirmed project enquiry address, or later connect a third-party form endpoint without introducing a BHC backend.
+The Start a Project flow is entirely client-side. The final step opens a pre-filled email. Replace the email address in `components/Site.tsx` with BHC's confirmed project enquiry address, or later connect a third-party form endpoint without introducing a BHC backend.
 
 ## Company information used
 
 The legal name is presented as BHC ENGINEERING & DESIGN (PTY) LTD. The supplied company documents show the company was registered in South Africa in August 2026. Avoid publishing private director or tax PIN information on the public site unless separately approved.
-
-
-## v9 structure
-
-Pages: Home, About, Services, Projects, Contact. Content lives in `lib/content.ts`. Add real registrations to `registrations` and approved director profiles to `leaders`; those sections only appear once populated.
