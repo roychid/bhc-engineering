@@ -26,8 +26,8 @@ export const sectors = [
   { name: 'Residential', text: 'Private homes, cluster housing and multi-unit developments designed for the way people live.', img: 'sector-residential', pos: 'center' },
   { name: 'Commercial', text: 'Offices, retail and mixed-use buildings that work hard for their owners and occupants.', img: 'sector-commercial', pos: 'center' },
   { name: 'Industrial', text: 'Warehousing, logistics and light-industrial facilities planned around throughput and cost.', img: 'sector-industrial', pos: 'center' },
-  { name: 'Infrastructure', text: 'Site works, services and supporting infrastructure that projects depend on.', img: 'hero-home', pos: 'left center' },
-  { name: 'Development', text: 'Technical support for developers from feasibility and layout through to delivery.', img: 'hero-home', pos: 'right center' },
+  { name: 'Infrastructure', text: 'Site works, services and supporting infrastructure that projects depend on.', img: 'infrastructure', pos: 'center' },
+  { name: 'Development', text: 'Technical support for developers from feasibility and layout through to delivery.', img: 'development', pos: 'center' },
 ];
 
 export const approach = [
