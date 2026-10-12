@@ -93,7 +93,8 @@ main:focus { outline: none }
 /* labels in drawing-annotation style */
 .eyebrow { font: 500 var(--text-xs)/1.4 var(--font-label); letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 var(--space-05); display: flex; align-items: center; gap: var(--space-04) }
 .eyebrow::before { content: ""; width: var(--space-07); height: 3px; background: var(--accent); flex: none }
-.surface-inverse .eyebrow, .eyebrow-inverse, .page-head .eyebrow, .cta-band .eyebrow { color: var(--text-inverse-muted) }
+.surface-inverse .eyebrow, .cta-band .eyebrow { color: var(--text-inverse-muted) }
+.eyebrow-inverse, .page-head .eyebrow { color: var(--grey-200) } /* over photography: lighter for worst-case contrast */
 .cta-band .eyebrow { color: var(--accent-foreground) }
 .cta-band .eyebrow::before { background: var(--accent-foreground) }
 .idx { display: block; font: 500 var(--text-sm)/1 var(--font-label); color: var(--text-muted); margin-bottom: var(--space-05) }
@@ -144,10 +145,10 @@ main:focus { outline: none }
 .hero { position: relative; min-height: max(600px, min(92svh, 920px)); display: flex; background: var(--surface-inverse); color: var(--text-inverse); overflow: hidden; isolation: isolate }
 .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2 }
 /* Safe text zone on the left, image left open on the right (was 88% / 45% plus a brightness filter). */
-.hero-overlay { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--overlay-strong) 0%, rgba(16, 22, 28, .5) 55%, var(--overlay-soft) 100%), linear-gradient(0deg, rgba(16, 22, 28, .55), transparent 40%) }
+.hero-overlay { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(16, 22, 28, .86) 0%, var(--overlay-strong) 48%, rgba(16, 22, 28, .3) 75%, var(--overlay-soft) 100%), linear-gradient(0deg, rgba(16, 22, 28, .5), transparent 40%) }
 .hero-content { display: flex; flex-direction: column; justify-content: center; padding: calc(var(--nav-h) + var(--space-09)) 0 var(--space-09) }
 .hero h1 { font-size: var(--text-4xl); line-height: 1.02; max-width: 15ch; font-stretch: 118% }
-.hero-lede { max-width: 54ch; margin: var(--space-06) 0 0; font-size: var(--text-lg); color: var(--grey-200) }
+.hero-lede { max-width: 54ch; margin: var(--space-06) 0 0; font-size: var(--text-lg); color: var(--text-inverse) }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-04); margin-top: var(--space-08) }
 .hero-toggle { position: absolute; right: var(--pad); bottom: var(--space-07); width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: rgba(16, 22, 28, .6); border: 1px solid var(--line-work); color: var(--text-inverse); cursor: pointer; transition: background-color .15s }
 .hero-toggle:hover { background: var(--surface-inverse) }
@@ -233,7 +234,7 @@ main:focus { outline: none }
    ========================================================================== */
 .page-head { position: relative; isolation: isolate; overflow: hidden; background: var(--surface-inverse); color: var(--text-inverse); padding: calc(var(--nav-h) + var(--space-11)) 0 var(--space-11) }
 .page-head-media, .page-head-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2 }
-.page-head-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(16, 22, 28, .8) 0%, rgba(16, 22, 28, .55) 55%, var(--overlay-soft) 100%) }
+.page-head-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(16, 22, 28, .86) 0%, rgba(16, 22, 28, .78) 45%, rgba(16, 22, 28, .3) 75%, var(--overlay-soft) 100%) }
 .page-head.is-drawing { background-image: linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px); background-size: 48px 48px }
 .page-head-sketch { position: absolute; right: var(--pad); bottom: 0; height: calc(100% - var(--nav-h) - var(--space-07)); max-width: 46vw; width: auto; z-index: -1; opacity: .9 }
 .sketch path { fill: none }
@@ -241,7 +242,7 @@ main:focus { outline: none }
 .sketch .dw-accent { stroke: var(--accent); stroke-width: 1.5 }
 .sketch .dg-label { font-size: 11px }
 .page-head h1 { font-size: var(--text-3xl); line-height: 1.05; max-width: 18ch }
-.page-head .lede { color: var(--grey-200); margin-bottom: 0 }
+.page-head .lede { color: var(--text-inverse); margin-bottom: 0 }
 .page-head-inner { position: relative }
 
 .prose { display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-10) }
@@ -367,7 +368,7 @@ main:focus { outline: none }
   .values li:last-child, .type:last-child { grid-column: auto }
   .epc-chain li { flex-direction: row; align-items: center; border-right: 0; border-bottom: 1px solid var(--border-inverse) }
   .epc-key { font-size: var(--text-2xl); width: 2.5rem }
-  .hero-overlay { background: linear-gradient(180deg, rgba(16, 22, 28, .6) 0%, rgba(16, 22, 28, .78) 45%, rgba(16, 22, 28, .82) 100%) }
+  .hero-overlay, .page-head-shade { background: linear-gradient(180deg, rgba(16, 22, 28, .7) 0%, rgba(16, 22, 28, .82) 40%, rgba(16, 22, 28, .86) 100%) }
   .hero-content { padding-bottom: var(--space-11) }
   .hero-toggle { bottom: var(--space-05) }
   .dim { margin-top: var(--space-08) }
